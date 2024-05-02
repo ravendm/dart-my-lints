@@ -1,11 +1,15 @@
 // ignore_for_file: unused_local_variable
-import 'package:custom_lint_example/HelloService.dart';
-import 'package:custom_lint_example/Utils.dart';
+import 'HelloService.dart';
+import 'Utils.dart';
 
 void main() {
+  (int, bool) testRecord() {
+    return (1, true);
+  }
+
   // remove the next line.
   // expect_lint: dont_say_his_name
-  var definitelyNotVoldemort = "the wizard of mystery";
+  var definitelyNotVoldemort = "the wizard of mystery voldemort";
 
   // place your cursor on the string literal and `ctrl + .`
   // in VSCode (or whatever shortcut your IDE supports for assist actions)
@@ -17,4 +21,7 @@ void main() {
 
   // navigate to the `Utils` and check it out.
   Utils.hi();
+
+  final res = testRecord();
+  print(res.$1);
 }

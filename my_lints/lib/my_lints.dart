@@ -1,9 +1,6 @@
 import 'package:custom_lint_builder/custom_lint_builder.dart';
-
-import 'assists/insert_spell_in_string_literal.dart';
-import 'lint_rules/dont_say_his_name.dart';
-import 'lint_rules/one_service_class_per_file.dart';
-import 'lint_rules/util_methods_be_static.dart';
+import 'package:my_lints/lint_rules/dont_say_his_name.dart';
+import 'package:my_lints/lint_rules/dont_use_positioned_record_fields.dart';
 
 // Entrypoint of plugin
 PluginBase createPlugin() => _MyLints();
@@ -14,13 +11,10 @@ class _MyLints extends PluginBase {
   @override
   List<LintRule> getLintRules(CustomLintConfigs configs) => [
         DontSayHisName(),
-        UtilMethodsBeStatic(),
-        OneServiceClassPerFile(),
+        DontUsePositionedRecords(),
       ];
 
   // Assists
   @override
-  List<Assist> getAssists() => [
-        InsertSpellInStringLiteral(),
-      ];
+  List<Assist> getAssists() => [];
 }

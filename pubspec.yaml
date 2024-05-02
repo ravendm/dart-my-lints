@@ -3,12 +3,11 @@ version: 0.0.1
 publish_to: none
 
 environment:
-  sdk: ">=2.16.0 <3.0.0"
+  sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
-  riverpod: ^2.0.0
 
 dev_dependencies:
-  custom_lint: ^0.3.4
+  custom_lint: ^0.6.4
   my_lints:
     path: ./my_lints
