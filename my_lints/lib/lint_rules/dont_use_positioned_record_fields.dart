@@ -1,3 +1,4 @@
+import 'package:analyzer/error/error.dart';
 import 'package:analyzer/error/listener.dart';
 import 'package:custom_lint_builder/custom_lint_builder.dart';
 
@@ -6,6 +7,7 @@ class DontUsePositionedRecords extends DartLintRule {
 
   // Lint rule metadata
   static const _code = LintCode(
+    errorSeverity: ErrorSeverity.WARNING,
     name: 'dont_use_positioned_records',
     problemMessage:
         'Don' 't use positioned record fields, use named record fields instead',

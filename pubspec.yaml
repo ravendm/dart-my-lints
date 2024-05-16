@@ -1,11 +1,13 @@
 name: custom_lint_example
-version: 0.0.2
+version: 0.0.3
 publish_to: none
 
 environment:
   sdk: '>=3.3.3 <4.0.0'
 
 dependencies:
+  flutter:
+    sdk: flutter
 
 dev_dependencies:
   custom_lint: ^0.6.4
